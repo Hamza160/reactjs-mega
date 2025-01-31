@@ -1,6 +1,11 @@
+import Card from "./components/Card";
+import Cart from "./components/Cart";
 import Greeting from "./components/Greeting";
+import Password from "./components/Password";
 import ProductInfo from "./components/ProductInfo";
-
+import User from "./components/User";
+import Weather from "./components/Weather";
+ 
 const App = () => {
   const myName = 'Hamza Ashraf';
   const multiplay = (a:number, b:number) => a * b
@@ -50,6 +55,26 @@ const App = () => {
             <li>Location: {location}</li>
         </ul>
         ))}
+      <hr />
+      <h1>User Component</h1>
+      <User
+        img="https://avatars.githubusercontent.com/u/69757932?v=4&size=64"
+        name="Hamza Ashraf"
+        age={28}
+        isMarried={true}
+        hobbies={['Book Reading', 'Development', 'Gyming']}
+      />
+      <hr />
+      <Card>
+        <h1>My Card</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ducimus aut ratione maiores cum quidem. Repudiandae perferendis voluptate debitis aliquid, nobis quia soluta, cupiditate recusandae inventore natus dolores est distinctio.</p>
+      </Card>
+      <hr />
+      <Password isValid={false}/>
+      <hr />
+      <Cart />
+      <hr />
+      <Weather temprature={20}/>
    </main>
   )
 }
