@@ -1,3 +1,4 @@
+import { FaCartArrowDown } from "react-icons/fa";
 import Card from "./components/Card";
 import Cart from "./components/Cart";
 import Greeting from "./components/Greeting";
@@ -5,7 +6,13 @@ import Password from "./components/Password";
 import ProductInfo from "./components/ProductInfo";
 import User from "./components/User";
 import Weather from "./components/Weather";
- 
+import { FaComputer } from "react-icons/fa6";
+import Button from "./components/Button";
+import Copy from "./components/Copy";
+import Move from "./components/Move";
+// import './index.css'
+
+
 const App = () => {
   const myName = 'Hamza Ashraf';
   const multiplay = (a:number, b:number) => a * b
@@ -28,8 +35,21 @@ const App = () => {
       location:'PAK'
     }
   ]
+  const styles = {color: 'white', backgroundColor:'teal', padding:'2rem'}
   return (
    <main>
+    <section>
+      <Move/>
+      <Copy />
+      <Button />
+      <h1> 
+        <FaCartArrowDown /> 
+        <FaComputer/>
+      </h1>
+    </section>
+      <section>
+        <h1 style={styles}>Inline Style</h1>
+      </section>
       <p>2 + 2 = {2 + 2}</p>
       <h1>{myName}</h1>
       <p>My Friend list: {['Alex', 'John', 'Jorden']}</p>
