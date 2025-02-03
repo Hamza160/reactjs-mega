@@ -1,11 +1,9 @@
-import Counter from "./components/Counter"
-import TodosList from "./components/TodosList"
+import CopyInput from "./components/CopyInput"
 
 const App = () => {
   return (
     <div>
-      {/* <Counter /> */}
-      <TodosList />
+      <CopyInput/>
     </div>
   )
 }
