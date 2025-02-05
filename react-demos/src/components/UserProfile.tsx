@@ -1,11 +1,14 @@
 import { useContext } from "react"
-import { UserContext } from "./UserContext"
+import { UserContext } from "../UserContext"
 
 const UserProfile = () => {
     const {user} = useContext(UserContext)
-  return (
-    <h1>Hello {user.name}</h1>
-  )
+    return (
+        <div>
+           <h1>User Profile</h1>
+           <p>Name:  {user.name}</p>
+        </div>
+    )
 }
 
 export default UserProfile
