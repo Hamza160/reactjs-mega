@@ -1,5 +1,5 @@
 
-const ComponentB = () => {
+const ComponentB = ({name}:{name?:string}) => {
   return (
     <div>ComponentB</div>
   )

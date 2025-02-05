@@ -1,17 +1,17 @@
-import { createContext, useState } from "react";
+import { PropsWithChildren, useContext, useState } from "react";
 
-export const UserContext = createContext()
+export const UserContext = useContext()
 
-const UserProvider = ({children}) => {
-    const [user, setUser] = useState({name:'Hamza Ashraf'})
+const UserProvider = ({children}:PropsWithChildren) => {
+    const [name, setName] = useState('')
 
-    const updateUser = (newName) => {
-        setUser({name:newName})
+    const changeName = (newName:string) => {
+        setName(newName)
     }
 
-    return <UserContext.Provider value={{user, updateUser}}>
-        {children}
-    </UserContext.Provider>
+    return (
+        <UserContext.Provider value={{name, changeName}}>{children}</UserContext.Provider>
+    )
 }
 
 export default UserProvider

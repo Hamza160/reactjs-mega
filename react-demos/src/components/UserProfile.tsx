@@ -3,11 +3,8 @@ import { UserContext } from "./UserContext"
 
 const UserProfile = () => {
     const {user} = useContext(UserContext)
-    console.log(user)
   return (
-    <div>
-        <h1>{user.name}</h1>
-    </div>
+    <h1>Hello {user.name}</h1>
   )
 }
 
