@@ -1,17 +1,11 @@
-import { useRef } from "react"
+import FocusInput from "./components/FocusInput"
+import Timer from "./components/Timer"
 
 const App = () => {
-  const inputRef = useRef(null)
-  
-  const focusInput = () => {
-    inputRef.current.focus()
-    inputRef.current.value = 'Hamza Ashraf'
-  }
-
   return (
   <div>
-     <input type="text" ref={inputRef}/>
-     <button onClick={focusInput}>Focus & Write Hamza</button>
+    <FocusInput/>
+    <Timer/>
   </div>
   )
 }
